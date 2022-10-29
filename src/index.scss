@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+$bgColor: #ffffff;
+$mainColor: #212121;
+$textColor: #8e8e8f;
+$blockColor: #E6F4F1;
+$priceColor: #00BB9B;
+$fontText: 'Montserrat', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $bgColor;
+    color: #222;
+    font-family: $fontText;
+    font-weight: 200;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+header {
+    position: relative;
+}
+
+header .logo {
+    font-weight: 600;
+    color: #ff4343;
+    font-size: 35px;
+    margin: 25px;
+    width: 100px;
+    height: 35px;
+}
+
+header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header ul.nav li:nth-child(3) {
+    margin-right: 25px;
+}
+
+header ul.nav li:hover {
+    opacity: 0.5;
+
+}
+
+header .shop-card-button {
+    float: right;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-card-button:hover,
+header .shop-card-button.active {
+    color: #ff4343;
+    transform: scale(1.5);
+}
+
+header .shop-card {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background: #fafafa;
+    -webkit-box-shadow: 8px 7px 8px -7px #161616; 
+    box-shadow: 8px 7px 8px -7px #161616;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 0;
+}
+header .shop-card .empty h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: #eeeeee7b;
+    padding: 5px;
+    border-radius: 10px;
+}
+header .shop-card .item{
+    width: 100%;
+    float: left;
+    border-radius: 10px;
+    background-color: #eeeeee7b;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+header .shop-card .item img{
+    float: left;
+    width: 70px;
+    margin-right: 20px;
+}
+header .shop-card .item h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+header .shop-card .item b{
+    color: #797979;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+header .shop-card .item p{
+    color: #444444;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+header .shop-card .item .delete-item{
+    color: #ff4343;
+    float: right;
+    position: relative;
+    top: -20px;
+    cursor: pointer;
+    left: -25px;
+    transition: color, transform 500ms ease;
+}
+header .shop-card .item .delete-item:hover{
+    color: #f68e8e;
+    transform: scale(1.5);
+}
+
+header .shop-card .sum{
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: #eeeeee7b;
+    padding: 10px 0px 10px;
+}
+header .presentation {
+    margin: 15px 0 50px 0;
+    background: url(./img/gameok.png) no-repeat;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.categories div{
+    display: inline-block;
+    background-color: #eeeeee7b;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+}
+
+.categories div:hover{
+    border-color: silver;
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: $blockColor;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+main .item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+}
+
+main .item img:hover {
+    transform: scale(1.05);
+}
+
+main h2,
+main p,
+main b {
+    margin: 10px 20px;
+    color: $mainColor;
+}
+
+main p {
+    color: $textColor;
+}
+
+main b {
+    font-size: 25px;
+    color: $priceColor;
+}
+
+main .add-to-card {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ff4343;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #ffff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+}
+
+main .add-to-card:hover {
+    transform: scale(1.5) translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 15px;
+}
